@@ -22,7 +22,7 @@
       background: #ffffff;
       border-radius: 12px;
       box-shadow: 0 2px 16px rgba(15, 98, 254, 0.10);
-      max-width: 520px;
+      max-width: 620px;
       width: 100%;
       overflow: hidden;
     }
@@ -34,29 +34,51 @@
       color: #ffffff;
     }
 
-    .ibm-badge {
-      display: inline-flex;
+    .sponsors-bar {
+      display: flex;
       align-items: center;
-      gap: 8px;
-      background: rgba(255,255,255,0.15);
-      border-radius: 4px;
-      padding: 4px 10px;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 16px;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      background: rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 20px;
     }
 
-    .ibm-badge svg {
-      flex-shrink: 0;
+    .sponsor-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .sponsor-item span {
+      font-size: 9px;
+      color: rgba(255,255,255,0.65);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .sponsor-logo {
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sponsor-divider {
+      width: 1px;
+      height: 32px;
+      background: rgba(255,255,255,0.25);
     }
 
     .card-header h1 {
-      font-size: 22px;
+      font-size: 26px;
       font-weight: 700;
-      line-height: 1.25;
-      margin-bottom: 6px;
+      line-height: 1.2;
+      margin-bottom: 8px;
+      width: 100%;
     }
 
     .card-header h1 span {
@@ -64,24 +86,30 @@
     }
 
     .card-header p {
-      font-size: 13.5px;
-      color: rgba(255,255,255,0.82);
+      font-size: 15px;
+      color: rgba(255,255,255,0.88);
       line-height: 1.5;
+      width: 100%;
     }
 
     .event-meta {
       display: flex;
-      gap: 20px;
+      gap: 12px;
       margin-top: 18px;
       flex-wrap: wrap;
+      width: 100%;
     }
 
     .event-meta .pill {
       background: rgba(255,255,255,0.18);
       border-radius: 20px;
-      padding: 4px 12px;
-      font-size: 12px;
+      padding: 6px 16px;
+      font-size: 14px;
+      font-weight: 600;
       color: #ffffff;
+      flex: 1;
+      text-align: center;
+      min-width: 100px;
     }
 
     /* ── Form body ── */
@@ -195,21 +223,68 @@
 <div class="card">
 
   <div class="card-header">
-    <div class="ibm-badge">
-      <svg width="22" height="9" viewBox="0 0 22 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="2.5" height="9" fill="white"/>
-        <rect x="4.5" width="2.5" height="9" fill="white"/>
-        <rect x="9" y="1.5" width="2.5" height="6" fill="white"/>
-        <rect x="13.5" width="2.5" height="9" fill="white"/>
-        <rect x="18" width="2.5" height="9" fill="white"/>
-      </svg>
-      IBM &nbsp;|&nbsp; Watsonx Orchestrate
+
+    <!-- Barra de logos patrocinadores -->
+    <div class="sponsors-bar">
+
+      <!-- Integssoft -->
+      <div class="sponsor-item">
+        <div class="sponsor-logo">
+          <!-- Logo Integssoft: texto estilizado en blanco -->
+          <svg width="90" height="22" viewBox="0 0 90 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="90" height="22" rx="3" fill="rgba(255,255,255,0.15)"/>
+            <text x="45" y="15" font-family="'Segoe UI',sans-serif" font-size="10" font-weight="700" fill="white" text-anchor="middle" letter-spacing="1">INTEGSSOFT</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="sponsor-divider"></div>
+
+      <!-- IBM -->
+      <div class="sponsor-item">
+        <div class="sponsor-logo">
+          <svg width="40" height="16" viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="4" height="16" fill="white"/>
+            <rect x="7" width="4" height="16" fill="white"/>
+            <rect x="14" y="2.5" width="4" height="11" fill="white"/>
+            <rect x="21" width="4" height="16" fill="white"/>
+            <rect x="28" width="4" height="16" fill="white"/>
+            <rect x="35" width="4" height="16" fill="white"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="sponsor-divider"></div>
+
+      <!-- AIERA -->
+      <div class="sponsor-item">
+        <div class="sponsor-logo">
+          <svg width="90" height="22" viewBox="0 0 90 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="90" height="22" rx="3" fill="rgba(255,255,255,0.15)"/>
+            <text x="45" y="15" font-family="'Segoe UI',sans-serif" font-size="9" font-weight="700" fill="white" text-anchor="middle" letter-spacing="0.5">AIERA · Ramos Arizpe</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="sponsor-divider"></div>
+
+      <!-- TD SYNNEX -->
+      <div class="sponsor-item">
+        <div class="sponsor-logo">
+          <svg width="80" height="22" viewBox="0 0 80 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="22" rx="3" fill="rgba(255,255,255,0.15)"/>
+            <text x="40" y="15" font-family="'Segoe UI',sans-serif" font-size="10" font-weight="700" fill="white" text-anchor="middle" letter-spacing="0.5">TD SYNNEX</text>
+          </svg>
+        </div>
+      </div>
+
     </div>
-    <h1>Webinar: <span>IA aplicada<br>a la gestión de personas</span></h1>
-    <p>Descubre el poder de la automatización inteligente<br>en tu área de RRHH.</p>
+
+    <h1>Webinar: <span>IA aplicada a la gestión de RRHH</span></h1>
+    <p>Descubre el poder de la automatización inteligente en tu área de RRHH.</p>
     <div class="event-meta">
       <span class="pill">📅 Próximamente</span>
-      <span class="pill">🎥 100% Online</span>
+      <span class="pill">🌐 100% Online</span>
       <span class="pill">🆓 Gratuito</span>
     </div>
   </div>
@@ -263,9 +338,6 @@
       </div>
 
       <button type="submit" class="btn">¡Reservar mi lugar →</button>
-
-      <p class="consent">Al registrarte aceptas recibir comunicaciones relacionadas con este evento.<br>
-      IBM respeta tu privacidad — sin spam, solo contenido relevante.</p>
     </form>
 
     <!-- Mensaje de éxito (oculto hasta el envío) -->
